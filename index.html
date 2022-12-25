@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/3b8eec32e0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+    <title>WebDesign</title>
+</head>
+<body>
+    <nav class="navbar">  <!-- Keeping the nav block in nav -->
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn"> 
+          <i href="#" class="fa fa-bars"></i> <!-- Used fontawesome to import bars to make hamburger menu -->
+        </label>
+        <a href="#" class="logo"> <!-- href="#" redirects to the same link when click on the associated font/icon/etc. -->
+            <i class="fa fa-spinner fa-flip-vertical" aria-hidden="true"></i><span>WeDesign</span>
+        </a> <!-- Added logo beside the "WeDesign"-->
+        <!-- Adding menu in the nav block as a list -->       
+        <ul>
+          <li><a class="active" href="#">Home</a></li> 
+          <li><a class="active" href="#name1">About</a></li>
+          <li><a class="active" href="#para">Services</a></li>
+          <li><a class="active" href="#contacts_section">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- To write on the image in phase 1 -->
+    <div class="container">
+        <p id="name" href="#">We are WeDesign!</p>
+        <p id="name1" href="#">You dream, we design and build.</p>
+    </div>
+    <!-- Creating the about us section where three buttons are used and added an event "onclick" which uses 
+    function "openAbout()" to execute the content. -->
+    <div id="about_us">
+        <div id="para">about us</div>
+        
+        <div class="tab">
+            <button class="tablinks" id="defaultOpen">Mission</button>
+            <button class="tablinks">Vision</button>
+            <button class="tablinks">Values</button>
+        </div>
+        <div id="Mission" class="tabcontent">   
+            <p>Consists of mission tab and respective info for each tab varies. On click of speacific tab, need to display respective information</p>
+        </div>
+        <div id="Vision" class="tabcontent">
+            <p>Consists of vision tab and respective info for each tab varies. On click of speacific tab, need to display respective information</p>
+        </div>
+        <div id="Values" class="tabcontent">  
+            <p>Consists of values tab and respective info for each tab varies. On click of speacific tab, need to display respective information</p>
+        </div>
+    </div>
+   <!-- Creating the services section -->
+    <div class="services_">
+        <div id="para1">services</div>
+        <section aria-label="New content">
+            <div class="service" data-services>
+                <button class="service-button prev">&lt;</button>
+                <p class="displayService">
+
+                </p>
+                <button class="service-button next">&gt;</button>
+            </div>
+        </section>
+    </div>
+    <!-- Creating the projects section -->
+    <div class="projects_">
+        <div id="para2">projects</div>
+        <div class="projects">
+            <div id="birdlogo">
+                <a href="#">
+                    <img class="image" src="./images/pexels-artem-podrez-6942655.jpg"/>
+                    <span id="birdtext">bird logo</span>
+                </a> 
+            </div>
+            <div id="emiratesapp">
+                <a  href="#">
+                    <img class="image" src="./images/pexels-photomix-company-887751.jpg"/>
+                    <span id="emiratestext">emirates app</span>
+                </a>
+            </div>
+            <div id="weatherapp">
+                <a href="#">
+                    <img class="image" src="./images/pexels-daria-shevtsova-1440727.jpg"/>
+                    <span id="weathertext">weather app</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="contacts" id="contacts_section">
+        <h3 id="para3">contact us</h3>
+        <form id="form" action="https://postmail.invotes.com/send" method="post">
+            <input type="text" name="subject" placeholder="Subject" required/>
+			<input type="text" class="field" placeholder="Full Name" required>
+			<input type="email" class="field" placeholder="E-mail Address" required>
+            <textarea name="text" placeholder="Message" required></textarea>
+            <input type="hidden" name="access_token" value="pzhrzhhtr2f731rkqds0w7nt" />
+            <input type="hidden" name="success_url" value=".?message=Email+Successfully+Sent%21&isError=0" />
+            <input type="hidden" name="error_url" value=".?message=Email+could+not+be+sent.&isError=1" />   
+			<input id="submit_form" type="submit" value="Send" />
+        </form>
+    </div>
+
+    <footer class="footercontainer">
+        <div class="footer">
+            <div class="footerheading footer1">
+                <p>Follow us</p>
+                <div class="icon">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footerheading footer2">
+                <p>Location</p>
+                <div class="location">
+                    <a href="https://www.google.com/maps/dir/45.5125128,-73.6133979/tav+college/@45.5003233,-73.645619,14z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x4cc919deffd38fa7:0x2572105e7bf86853!2m2!1d-73.6431749!2d45.490253"><p>6333 Decarie Blvd, 
+                        Montreal, Quebec H3W 3E1
+                        </p></a>
+                    <a href="#"><p>contact@webdesign.com.hr</p></a>
+                </div>     
+            </div>
+            <div class="footerheading footer3">
+                <p>Opening Timings</p>
+                <div class="location">
+                    <p>Monday: 11:30 - 23:00</p>
+                    <p>Tuesday: 11:00 - 23:00</p>
+                    <p>Wednesday: 12:00 - 22:00</p>
+                </div>
+            </div>
+        </div>
+        <hr> <!-- To provide a horizontal rule -->
+        <h5>2022 &copy; All right reserved</h5>
+    </footer>
+
+    <script src="index.js"></script>
+    
+</body>
+</html> 

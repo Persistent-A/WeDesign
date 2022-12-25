@@ -1,0 +1,374 @@
+*{
+    box-sizing: border-box; /* To prevent border collapse. */
+    margin: 0;
+    padding: 0;
+    text-decoration: none; /* To remove any decoration in the text. */
+    list-style: none; 
+}
+html{
+    scroll-behavior: smooth; /* To scroll the whole website smoothly. */
+}
+nav{
+    background: black;
+    height: 80px;
+    width: 100%; 
+    padding: 5px 40px 5px 40px;
+    background-color: black;
+    color: white;
+    position: sticky; /* To keep the nav bar sticky,
+                         even if the content the scrolled 
+                         to different phases. */
+    top: 0px;     /* To keep the position sticky from top. */
+    z-index: 3;   /* To avoid the overlapping of other content. */
+}
+a.logo{     /* To style the logo i.e., "WeDesign". */
+    color: white;
+    font-size: 25px;
+    line-height: 80px;
+    font-weight: bold;    
+}
+.logo:hover{ /* on hovering the logo Adding effects to it */
+    cursor: pointer;
+    color:#1b9bff;
+}
+nav ul{
+    float: right;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li .active{  
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;  
+    border-radius: 3px;
+    text-transform: uppercase; /* transforming the text to uppercase. */
+}
+.active:hover{
+    background: #1b9bff;
+    transition: .5s;
+    top: 150px;
+}
+/* Styling the hamburger menu */
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 10px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+/* Styling the icon beside WeDesign. */
+.fa-spinner{ 
+    color: red;
+}
+
+/* Styling the image in phase 1. */
+.container{
+    background-image: url(./images/pexels-suzy-hazelwood-1629236.jpg);
+    background-position: top left; /* It sets the initial position of image */
+    background-size: cover; /* to scale the background image to the smallest possible value to fill the container. */
+    background-repeat: no-repeat; /* Prevents the background image to repeat. */
+    background-attachment: fixed; /*To fix the background within the viewport. */ 
+    height: 700px;
+}
+#name{
+    color: white;
+    height: 350px;
+    width: 50%; /* It adjusts the width of the associated block with respect to the viewport. */
+    margin: auto;
+    padding-top: 310px;
+    text-align: center;
+    font-size: xx-large;
+    font-family:'Times New Roman', Times, serif;
+}
+#name1{
+    color: white;
+    width: 50%;
+    margin: auto;
+    font-size: large;
+    text-align: center;
+    padding-top: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#name:hover, #name1:hover{
+    transition: .5s;
+    color:#1b9bff;
+    cursor: pointer;
+}
+/* Styling the "about" content of phase 2. */
+.tab{
+    display: flex; /* to keep the content one-dimentional horizontally. */
+    justify-content: left; /* To align the content at the left side. */
+    overflow: hidden;
+    border: 1px solid rgb(14, 11, 11);
+    background-color: rgb(123, 116, 116);
+    margin: 20px 50px 0px 50px;  
+}
+.tab button{
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 130px;
+    padding: 14px 15px;
+    transition: 0.3s; /* To show transition effect, first slowly, then fast and again slowly. */
+}
+.tab button:hover{
+    background-color: rgb(11, 10, 10);
+    color: white;
+    font-weight: bolder;
+}
+.tab button.active{
+    background-color: rgb(94, 69, 69);
+}
+.tabcontent{
+    display: none; /* Keeping the display of the content of the tabs as none initially.*/
+    /* width: 90.7%;  */
+    margin: 0px 50px;
+    padding: 14px 18px;
+    border: 1px solid black;
+    background-color: rgb(15, 13, 13);
+    color: white;
+}
+
+/* Styling the about, services, projects and contact only. */
+#para, #para1, #para2, #para3{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    text-transform: uppercase;
+}
+/* Styling the services section of phase 3. */
+.service{
+    background-color: black;
+    color: white;
+    padding: 40px 80px 40px 80px;
+    /* margin: 50px auto; */
+    position: relative;
+}
+.displayService{
+    display: block;
+    text-align: center;
+    margin: 0rem 6rem 0rem 6rem;
+}
+.service-button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* To transform the button at the middle of the content with respect to Y-axis.*/
+    cursor: pointer;
+    padding: 5px; 
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+}
+.service-button.prev{
+    left: 5rem;
+}
+.service-button.next{
+    right: 5rem;
+}
+/* Styling the projects section of phase 4. */
+.projects{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.image{
+    width: 100%;
+    height: 600px;
+    border-radius: 10px;
+}
+#birdlogo, #emiratesapp, #weatherapp {
+    width: 32%;
+}
+
+/* Styling the text over the image. */
+#birdtext, #emiratestext, #weathertext{
+    position: relative;
+    bottom: 50px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 15px;
+    color: black;
+    margin: 20px;
+}
+/* Styling the contacts section of phase 5 */
+#form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form > input:not(:last-child) {
+    margin-bottom: 10px;
+    width: 500px;   
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid rgb(118, 28, 28);
+    text-align: center;
+}
+
+#form > input:not(:last-child):focus{
+    outline: none;
+    border-bottom: 2px solid #de2121;
+}
+
+textarea{
+    margin-bottom: 10px;
+    width: 500px;   
+    height: 70px;
+    text-align: center;
+}
+
+textarea:focus{
+    outline: #de2121;
+    border: 2px solid #de2121;
+}
+
+#submit_form{
+    width: 500px;
+    height:40px;
+    background-color:#1b9bff;
+    border-radius: 5px;
+    border: none;
+}
+
+#submit_form:hover{
+    cursor: pointer;
+    font-size: large;
+    color: rgb(89, 84, 84);
+}
+
+.footercontainer{
+    margin-top: 30px;
+    text-align: center;
+    background-color: black;
+    color: white;   
+}
+.footer{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background-color: rgb(32, 30, 30);
+    padding: 20px;  
+    font-family:Arial, Helvetica, sans-serif  
+}
+.icon a, .location a{
+    color: white;
+}
+.icon {
+    font-size: 25px;
+}
+.icon, .location{
+    margin-top: 15px;
+}
+.footer a:hover{
+    color:#1b9bff;
+}
+
+@media only screen and (max-width: 650px){
+
+    /* Styling the logo and nav menu section for mobile view. */
+        .logo{
+            display: flex;
+            align-items: center;
+        }
+    
+        nav ul li a{
+            font-size: 16px;
+        }
+        .checkbtn {
+            display: block;
+        }
+        ul {
+            display:block;
+            position: fixed;
+            width: 50%;
+            height: 100vh;
+            background: #2c3e50;
+            top: 80px;
+            right: -100%;
+            text-align: center;
+            transition: all .5s;
+        }
+        nav ul li {
+            display: block;
+            margin: 50px 0;
+            line-height: 30px;
+        } 
+      
+        a:hover, a.active {
+            background: none;
+            color: #0082e6;
+        }
+        /* To bring ul content inside the hamburger menu. */
+        #check:checked ~ ul { 
+            right: 0;
+        }
+        /* Styling background image fonts for mobile view */
+        #name{
+            font-size: 30px;
+            font-weight: bolder;
+            /* margin-bottom: 20px; */
+        }
+        #name1{
+            font-size: 0px;
+        }
+        /* Styling about us section for mobile view */
+        .tab{
+            margin: 20px 10px 0px 10px;
+        }
+        .tablinks{
+            width:33%;
+        }
+        .tabcontent{
+            margin: 0px 10px;
+        }
+        /* Styling the services section for mobile view. */
+        .displayService{
+            margin: auto;
+        }
+        .service-button.prev{
+            left: 0.5rem;
+        }
+        .service-button.next{
+            right: 0.5rem;
+        }
+        /* Styling the projects section for mobile view. */
+        .projects{
+            display: flex;
+            flex-direction: column;
+            width:100%;
+        }
+        #birdlogo, #emiratesapp, #weatherapp{
+            width: 98%;
+            margin:auto;
+        }
+        #form > input:not(:last-child), textarea, #submit_form{
+            width: 90%;
+        }
+        .footercontainer{
+            padding-bottom: 10px;
+        }
+        .footer{
+            display: flex;
+            flex-direction: column;
+            height: 380px;
+        }
+    }
+    
+
+
+
+
+
+
